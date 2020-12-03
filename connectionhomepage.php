@@ -188,3 +188,9 @@ $conn->close();
 </table>
 </body>
 </html>
+
+<body>
+<p>Click here to enter daily data</p>
+<form method="post" action="daily.html">
+<input type="submit" value="Daily Data" />
+</body>

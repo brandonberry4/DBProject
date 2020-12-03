@@ -29,3 +29,9 @@ mysqli_close($conn);
 
 
 ?>
+
+<body>
+<p>Click to go to view data</p>
+<form method="post" action="connectionhomepage.php">
+<input type="submit" value="View All Data" />
+</body>

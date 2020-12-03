@@ -31,3 +31,9 @@ mysqli_close($conn);
 
 
 ?>
+
+<body>
+<p>Click to go to daily data page</p>
+<form method="post" action="daily.html">
+<input type="submit" value="Sign in" />
+</body>

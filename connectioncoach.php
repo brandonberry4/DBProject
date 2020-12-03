@@ -31,3 +31,8 @@ mysqli_close($conn);
 
 
 ?>
+<body>
+<p>Click to go to sign-in page</p>
+<form method="post" action="signin.html">
+<input type="submit" value="Sign in" />
+</body>

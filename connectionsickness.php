@@ -34,3 +34,9 @@ mysqli_close($conn);
 
 
 ?>
+
+<body>
+<p>Click to go to training data page</p>
+<form method="post" action="training.html">
+<input type="submit" value="Training" />
+</body>
