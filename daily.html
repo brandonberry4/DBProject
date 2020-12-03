@@ -5,16 +5,16 @@
     <body>    
         <link href = "style.css" type = "text/css" rel = "stylesheet" />    
         <h2>Daily Data</h2>    
-        <form name = "form1" action="modified.php" method = "post" enctype = "multipart/form-data" >    
+        <form method="post" action="connectiondaily.php">    
             <div class = "container">    
-                <div class = "form_group">    
-                    <label>Enter Meal Eaten:</label>    
+                <div class = "form_group">  
+				<div class = "form_group">    
+                    <label>Weight:</label>    
+                    <input type = "text" name = "lname" value = "" required/>    
+                </div>				
+                    <label>Enter Number Meals Eaten:</label>    
                     <input type = "text" name = "fname" value = "" required/>    
-                </div>    
-                <div class = "form_group">    
-                    <label>Enter Abnormal Symptoms:</label>    
-                    <input type = "text" name = "mname" value = "" required />    
-                </div>    
+                </div>     
                 <div class = "form_group">    
                     <label>Enter Hours of Sleep:</label>    
                     <input type = "text" name = "lname" value = "" required/>    
@@ -31,12 +31,21 @@
                     <label>Enter Avg Active HR:</label>    
                     <input type = "text" name = "lname" value = "" required/>    
                 </div>
-                <div class = "form_group">    
-                    <label>Weight:</label>    
-                    <input type = "text" name = "lname" value = "" required/>    
+				<div class = "form_group">    
+                    <label>Enter Abnormal Symptoms:</label>    
+                    <input type = "text" name = "mname" value = "" />    
+                </div> 
+				<div class = "form_group">    
+                    <label>Health Tests Taken:</label>    
+                    <input type = "text" name = "lname" value = "" />    
                 </div>
-				<form action="training.html">
-				<input type="submit" value="Go to Training Data" />
+				<div class = "form_group">    
+                    <label>Test Results:</label>    
+                    <input type = "text" name = "lname" value = "" />    
+                </div>
+                
+				
+				<input type="submit" value="Submit" />
 				</form>
             </div>    
         </form>    

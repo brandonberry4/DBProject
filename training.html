@@ -5,23 +5,30 @@
     <body>    
         <link href = "style.css" type = "text/css" rel = "stylesheet" />    
         <h2>Training Data</h2>    
-        <form name = "form1" action="modified.php" method = "post" enctype = "multipart/form-data" >    
+        <form method="post" action="connectiontraining.php">    
             <div class = "container">    
-                <div class = "form_group">    
-                    <label>Enter Participation:</label>    
-                    <input type = "text" name = "fname" value = "" required/>    
-                </div>    
-                <div class = "form_group">    
+                <div class = "form_group">  
+				<label for="participation">Enter Participation Level:</label>
+				<select name="participation" id="participation">
+				<option value="empty">-</option>
+				<option value="full">Full</option>
+				<option value="limited">Limited</option>
+				<option value="out">Out</option>
+				</select>
+				</div>
                     <label>Enter Workout:</label>    
-                    <input type = "text" name = "mname" value = "" required />    
-                </div>    
+                    <input type = "text" name = "fname" value = "" required/>    
+                </div>     
                 <div class = "form_group">    
-                    <label>Enter Avg Heart Rate:</label>    
+                    <label>Enter Average Heart Rate:</label>    
                     <input type = "text" name = "lname" value = "" required/>    
                 </div>
                 <div class = "form_group">    
-                    <label>Enter Injuries or Pains:</label>    
-                    <input type = "text" name = "lname" value = "" required/>         
+                    <label>Enter Injuries/Pain:</label>    
+                    <input type = "text" name = "lname" value = "" />    
+                </div>
+				<input type="submit" value="Submit" />
+				</form>
             </div>    
         </form>    
     </body>    
