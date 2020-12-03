@@ -7,11 +7,20 @@
 }  
   
 body {  
-  color: #8A2BE2;  
-  font-size: 20px;  
-  font-family: Verdana, Arial, Helvetica, monospace;  
-  background-color: #F0E8A0;  
-}  
+  border-collapse: collapse;
+	width: 100%;
+	color: #588c7e;
+	font-family: monospace;
+	font-size: 20px;
+	text-align: left;  
+} 
+
+th {
+background-color: #588c7e;
+color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+ 
   
 h2 {  
   text-align: center;  
