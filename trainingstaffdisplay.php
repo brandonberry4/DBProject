@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["FacultyID"]. "</td><td>" . $row["FirstName"] . "</td><td>"
-. $row["LastName"]. "</td></tr>" . $row["SportAssigned"] . "</td></tr>";
+. $row["LastName"]. "</td><td>" . $row["SportAssigned"] . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
@@ -85,7 +85,7 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["StudentID"]. "</td><td>" . $row["FirstName"] . "</td><td>"
-. $row["LastName"]. "</td></tr>" . $row["SportName"] . "</td></tr>" . $row["Position"] . "</td></tr>";
+. $row["LastName"]. "</td><td>" . $row["SportName"] . "</td><td>" . $row["Position"] . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
