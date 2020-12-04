@@ -1,7 +1,8 @@
 <?php
 $sportid = filter_input(INPUT_POST, 'SportID');
 $sportname = filter_input(INPUT_POST, 'SportName');
-$numathletes = filter_input(INPUT_POST, 'NumOfAthletes');
+$numofathletes = filter_input(INPUT_POST, 'NumOfAthletes');
+
 
 $host = "localhost";
 $dbusername = "root";
@@ -16,7 +17,7 @@ if (!$conn) {
 }
 
 $sql = "INSERT INTO sport (SportID, SportName, NumOfAthletes)
-values ('$sportid','$sportname','$numathletes')";
+values ('$sportid','$sportname','$numofathletes')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
@@ -28,3 +29,9 @@ mysqli_close($conn);
 
 
 ?>
+
+<body>
+<p>Click to go to sign-in page</p>
+<form method="post" action="signin.html">
+<input type="submit" value="Sign in" />
+</body>

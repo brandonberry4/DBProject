@@ -2,23 +2,10 @@
 <html>
 <head>
 <title>Table with database</title>
-<style>
-table {
-border-collapse: collapse;
-width: 100%;
-color: #588c7e;
-font-family: monospace;
-font-size: 25px;
-text-align: left;
-}
-th {
-background-color: #588c7e;
-color: white;
-}
-tr:nth-child(even) {background-color: #f2f2f2}
 </style>
 </head>
 <body>
+<link href = "stylesheet.css" type = "text/css" rel = "stylesheet" />
 <table>
 <tr>
 <th>Student ID</th>
@@ -40,7 +27,7 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["StudentID"]. "</td><td>" . $row["FirstName"] . "</td><td>"
-. $row["LastName"]. "</td></tr>" . $row["SportName"] . "</td></tr>" . $row["Position"] . "</td></tr>";
+. $row["LastName"]. "</td><td>" . $row["SportName"] . "</td><td>" . $row["Position"] . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
@@ -72,7 +59,7 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["BaseWeight"]. "</td><td>" . $row["BaseBloodPressure"] . "</td><td>"
-. $row["BaseAvgRestingHR"]. "</td></tr>" . $row["BaseAvgActiveHR"] . "</td></tr>" . $row["BaseVO2Max"] . "</td></tr>"
+. $row["BaseAvgRestingHR"]. "</td><td>" . $row["BaseAvgActiveHR"] . "</td><td>" . $row["BaseVO2Max"] . "</td><td>"
 . $row["BaseECG"] . "</td></tr>";
 }
 echo "</table>";
@@ -108,9 +95,9 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["DailyWeight"]. "</td><td>" . $row["MealsEaten"] . "</td><td>"
-. $row["HoursSlept"]. "</td></tr>" . $row["DailyBloodPressure"] . "</td></tr>" . $row["DailyAvgRestingHR"] . "</td></tr>"
-. $row["DailyAvgActiveHR"] . "</td></tr>" . $row["DailyAbnormalSymptoms"] . "</td></tr>"
-. $row["DailyHealthTestTaken"] . "</td></tr>" . $row["DailyTestResults"] . "</td></tr>";
+. $row["HoursSlept"]. "</td><td>" . $row["DailyBloodPressure"] . "</td><td>" . $row["DailyAvgRestingHR"] . "</td><td>"
+. $row["DailyAvgActiveHR"] . "</td><td>" . $row["DailyAbnormalSymptoms"] . "</td><td>"
+. $row["DailyHealthTestTaken"] . "</td><td>" . $row["DailyTestResults"] . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
@@ -146,9 +133,9 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["SickWeight"]. "</td><td>" . $row["SickBloodPressure"] . "</td><td>"
-. $row["SickAvgRestingHR"]. "</td></tr>" . $row["SickAvgActiveHR"] . "</td></tr>" . $row["SickVO2Max"] . "</td></tr>"
-. $row["SickECG"] . "</td></tr>" . $row["SickAbnormalSymptoms"] . "</td></tr>"
-. $row["SickHealthTestTaken"] . "</td></tr>" . $row["SickTestResults"] . "</td></tr>";
+. $row["SickAvgRestingHR"]. "</td><td>" . $row["SickAvgActiveHR"] . "</td><td>" . $row["SickVO2Max"] . "</td><td>"
+. $row["SickECG"] . "</td><td>" . $row["SickAbnormalSymptoms"] . "</td><td>"
+. $row["SickHealthTestTaken"] . "</td><td>" . $row["SickTestResults"] . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
@@ -179,7 +166,7 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["TrainingParticipation"]. "</td><td>" . $row["TrainingWorkout"] . "</td><td>"
-. $row["TrainingAvgHR"]. "</td></tr>" . $row["TrainingInjuriesOrPain"] . "</td></tr>";
+. $row["TrainingAvgHR"]. "</td><td>" . $row["TrainingInjuriesOrPain"] . "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
