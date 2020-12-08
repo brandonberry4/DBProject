@@ -1,33 +1,33 @@
 <?php
-   include("config.php");
-   session_start();
+//   include("config.php");
+//   session_start();
    
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
+//   if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $firstname = mysqli_real_escape_string($db,$_POST['firstname']);
-      $lastname = mysqli_real_escape_string($db,$_POST['lastname']);
-	  $id = mysqli_real_escape_string($db,$_POST['id']); 
+//     $firstname = mysqli_real_escape_string($db,$_POST['firstname']);
+//      $lastname = mysqli_real_escape_string($db,$_POST['lastname']);
+//	  $id = mysqli_real_escape_string($db,$_POST['id']); 
       
-      $sql = "SELECT StudentID FROM studentathlete WHERE LastName = '$lastname' and ID = '$id'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+//      $sql = "SELECT StudentID FROM studentathlete WHERE LastName = '$lastname' and ID = '$id'";
+//      $result = mysqli_query($db,$sql);
+//      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      //$active = $row['active'];
       
-      $count = mysqli_num_rows($result);
+//      $count = mysqli_num_rows($result);
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
-      if($count == 1) {
-         session_register("firstname");
-         $_SESSION['login_user'] = $firstname;
+//      if($count == 1) {
+//         session_register("StudentID");
+//         $_SESSION['login_user'] = id;
          
-         header("location: connectionhomepage.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
-?>
+//         header("location: signin.php");
+//      }else {
+//         $error = "Your Login Name or Password is invalid";
+//      }
+//   }
+//?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@
     <div class="wrapper">
         <h2>Sign in</h2>
         <p>Please fill in your credentials to login.</p>
-        <form action="" method="post">
+        <form action="connectionhomepage.php" method="post">
                 <label>First Name</label>
                 <input type="text" name="firstname" class="form-control"">
             </div>    

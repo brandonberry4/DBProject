@@ -1,9 +1,9 @@
 <?php
-$basweight = filter_input(INPUT_POST, 'BaseWeight');
-$basebp = filter_input(INPUT_POST, 'BaseBloodPressure');
-$baseavgresthr = filter_input(INPUT_POST, 'BaseAvgRestingHR');
+$baseweight = filter_input(INPUT_POST, 'BaseWeight');
+$basebloodpressure = filter_input(INPUT_POST, 'BaseBloodPressure');
+$baseavgrestinghr = filter_input(INPUT_POST, 'BaseAvgRestingHR');
 $baseavgactivehr = filter_input(INPUT_POST, 'BaseAvgActiveHR');
-$basevo2 = filter_input(INPUT_POST, 'BaseVO2Max');
+$basevo2max = filter_input(INPUT_POST, 'BaseVO2Max');
 $baseecg = filter_input(INPUT_POST, 'BaseECG');
 
 $host = "localhost";
@@ -19,7 +19,7 @@ if (!$conn) {
 }
 
 $sql = "INSERT INTO baselinedata (BaseWeight, BaseBloodPressure, BaseAvgRestingHR, BaseAvgActiveHR, BaseVO2Max, BaseECG )
-values ('$basweight','$basebp','$baseavgresthr','$baseavgactivehr','$basevo2','$baseecg')";
+values ('$baseweight','$basebloodpressure','$baseavgrestinghr','$baseavgactivehr','$basevo2max','$baseecg')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
@@ -35,5 +35,5 @@ mysqli_close($conn);
 <body>
 <p>Click to go to daily data page</p>
 <form method="post" action="daily.html">
-<input type="submit" value="Sign in" />
+<input type="submit" value="Daily" />
 </body>

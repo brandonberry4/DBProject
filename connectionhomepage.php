@@ -6,6 +6,7 @@
 </head>
 <body>
 <link href = "stylesheet.css" type = "text/css" rel = "stylesheet" />
+<h3>Student Info</h3>
 <table>
 <tr>
 <th>Student ID</th>
@@ -15,7 +16,7 @@
 <th>Position</th>
 </tr>
 <?php
-include ('session.php');
+//include ('session.php');
 $conn = mysqli_connect("localhost", "root", "", "student athlete health tracker");
 // Check connection
 if ($conn->connect_error) {
@@ -37,6 +38,7 @@ $conn->close();
 </table>
 </body>
 
+<h3>Baseline Data</h3>
 <body>
 <table>
 <tr>
@@ -70,6 +72,7 @@ $conn->close();
 </table>
 </body>
 
+<h3>Daily Data</h3>
 <body>
 <table>
 <tr>
@@ -107,6 +110,7 @@ $conn->close();
 </table>
 </body>
 
+<h3>Sick Data</h3>
 <body>
 <table>
 <tr>
@@ -145,6 +149,7 @@ $conn->close();
 </table>
 </body>
 
+<h3>Training Info</h3>
 <body>
 <table>
 <tr>
@@ -177,8 +182,15 @@ $conn->close();
 </body>
 </html>
 
-<body>
+
+<p>Click here to enter baseline data</p>
+<form method="post" action="baseline.html">
+<input type="submit" value="Baseline Data" />
+</form>
+
+
+
 <p>Click here to enter daily data</p>
 <form method="post" action="daily.html">
 <input type="submit" value="Daily Data" />
-</body>
+</form>

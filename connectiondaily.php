@@ -36,13 +36,15 @@ mysqli_close($conn);
 ?>
 
 <body>
-<p>If you are sick click here</p>
-<form method="post" action="sickness.html">
-<input type="submit" value="Sickness Page" />
-</body>
-
-<body>
 <p>If you aren't sick click here</p>
 <form method="post" action="training.html">
 <input type="submit" value="Training Data" />
+</form>
+</body>
+
+<body>
+<p>If you are sick click here</p>
+<form method="post" action="sickness.html">
+<input type="submit" value="Sickness Page" />
+<form>
 </body>
