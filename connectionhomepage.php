@@ -15,6 +15,7 @@
 <th>Position</th>
 </tr>
 <?php
+include ('session.php');
 $conn = mysqli_connect("localhost", "root", "", "student athlete health tracker");
 // Check connection
 if ($conn->connect_error) {
